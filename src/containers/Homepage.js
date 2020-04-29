@@ -6,7 +6,7 @@ import Dog from "../components/Dog";
 import axios from "axios";
 
 
-const apiHost = "MOCK API URL";
+const apiHost = "https://5ea56a222d86f00016b45ccd.mockapi.io"
 
 class Homepage extends React.Component {
     constructor(props){
