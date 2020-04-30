@@ -14,7 +14,9 @@ class Homepage extends React.Component {
 
         this.state = {
             favorites: [],
-            loadingFavorites: false
+            loadingFavorites: false,
+            loading: true,
+            disabledButton: false
         }
     }
     componentDidMount() {
@@ -57,7 +59,8 @@ class Homepage extends React.Component {
             }).then((result) => {
                 const eklenenFavori = result.data; // {id: 1, dogId: benim yolladigim dog id, createdat: date}
                 this.setState({
-                    favorites: [...this.state.favorites, eklenenFavori]
+                    favorites: [...this.state.favorites, eklenenFavori],
+                    
                 })
             }).catch((err) => {
                 console.log(err);
@@ -81,7 +84,7 @@ class Homepage extends React.Component {
                 <ul>
                     {
                         dogs.map((dog) => {
-                            return <Dog toggle={this.toggle} id={dog.id} getStatus={this.getStatus} {...dog}/>
+                            return <Dog toggle={this.toggle} id={dog.id} getStatus={this.getStatus} disabledButton={this.state.disabledButton} {...dog}/>
                         })
                     }
                 </ul>
