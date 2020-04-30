@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import Header from "./Header";
+import Header from "./components/Header";
 import {Switch, Route} from "react-router-dom";
-import routes from "./routes";
+//import routes from "./routes";
 import Homepage from "./containers/Homepage";
 import FilteredDogs from "./containers/FilteredDogs";
 import DogDetails from './containers/DogDetails';

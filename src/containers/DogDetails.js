@@ -12,6 +12,18 @@ const DogDetails = (props) => {
 
     return (
         <div>
+            <div>
+                <Card className="card">
+                    <CardImg width="100%" src={showDogs.image} alt="Card image cap" />
+                    <CardBody >
+                        <CardTitle>
+                            <h3>{showDogs.name}</h3>
+                        </CardTitle>
+                        <CardSubtitle>{showDogs.age}</CardSubtitle>
+                        <CardText>{showDogs.description}</CardText>
+                    </CardBody>
+                </Card>
+            </div>
             {/* <li>
                 <h1> selectedDog:  {showDogs.name}</h1>
                 <ul>
@@ -30,18 +42,7 @@ const DogDetails = (props) => {
                 </ul>
             </li> */}
 
-            <div>
-                <Card className="card">
-                    <CardImg width="100%" src={showDogs.image} alt="Card image cap" />
-                    <CardBody >
-                        <CardTitle>
-                            <h3>{showDogs.name}</h3>
-                        </CardTitle>
-                        <CardSubtitle>{showDogs.age}</CardSubtitle>
-                        <CardText>{showDogs.description}</CardText>
-                    </CardBody>
-                </Card>
-            </div>
+            
         </div>
     )
 }

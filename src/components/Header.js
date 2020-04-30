@@ -5,17 +5,12 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
+
 } from 'reactstrap';
-import navs from "./navs";
+//import navs from "./navs";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
