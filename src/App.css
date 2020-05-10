@@ -29,3 +29,98 @@
   text-decoration: none;
   background-color: transparent;
 }
+
+
+
+/*Formik*/
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: lighter;
+}
+
+input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+}
+
+
+
+.firstName, .company, .mail {
+  margin-right: 10px;
+}
+
+.lastName, .phone, .url {
+  margin-left: 10px;
+}
+
+.firstName, .lastName, .company, .phone, .email, .url {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.firstName, .lastName, .company, .phone, .email, .url {
+  width: 45%;
+}
+
+.submitForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitForm button {
+  background-color: #5f519e;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 50%;
+  border-radius: 30px;
+  padding: 8px 0px;
+  font-weight: lighter;
+}
+
+.submitForm button:hover {
+  color: #5f519e;
+  background-color: #fff;
+  border: 2px solid #5f519e;
+}
+
+.preference {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-field {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+input.error {
+  border: 1px solid red;
+}

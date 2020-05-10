@@ -18,7 +18,7 @@ const navs = [
     },
     {
         path: "/about",
-        title: "About"
+        title: "Formik"
     },
 ];
 
