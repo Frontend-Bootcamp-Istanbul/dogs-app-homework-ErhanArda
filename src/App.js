@@ -1,33 +1,45 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import Header from "./components/Header";
-import {Switch, Route} from "react-router-dom";
-//import routes from "./routes";
-import Homepage from "./containers/Homepage";
-import FilteredDogs from "./containers/FilteredDogs";
-import DogDetails from './containers/DogDetails';
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header'
+import { Switch, Route } from 'react-router';
 
-class App extends React.Component{
-    render(){
-        return (
-            <div className="App">
-                <Header />
-                <Switch>
-                    <Route path="/" exact component={Homepage} />
-                    <Route path='/hakkinda' exact component={() => <div>Hakkimizda Componenti</div>} />
-                    <Route path="/tur/:yazilanTur" exact component={FilteredDogs} />
-                    <Route path='/details/:writtenDog'exact component={DogDetails} />
-                    <Route component={() => <div><h1>404 sayfa bulununamadi</h1></div>} />
-                    {/*{*/}
-                    {/*    routes.map((route) => {*/}
-                    {/*        // <Route {...route} />*/}
-                    {/*        return <Route key={route.path} path={route.path} exact={route.exact} component={route.component} />*/}
-                    {/*    })*/}
-                    {/*}*/}
-                </Switch>
-            </div>
-        );
-    }
+import routes from './routes'
+import HomePage from './containers/HomePage';
+import About from './containers/About';
+import FilteredDogs from './containers/FilteredDogs';
+import { Container } from 'reactstrap';
+import './App.css'
+class App extends Component {
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <Container>
+        <Switch>
+          {
+            routes.map((route) => {
+              return <Route key={route.path}
+                path={route.path} exact={route.isExact}
+                component={route.component}
+              />
+            })
+          }
+
+          {
+            /*
+            <Route path="/" exact component={HomePage} />
+            <Route path="/about" component={About} />
+            <Route path="/breed/writtenBreed" component={FilteredDogs}/>
+            <Route component = {()=><div><h1>404 not </h1></div>}
+            */
+          }
+        </Switch>
+        </Container>
+      </div>
+    )
+  }
 }
+
 
 export default App;

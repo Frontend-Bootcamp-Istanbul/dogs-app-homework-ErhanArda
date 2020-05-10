@@ -1,19 +1,19 @@
-import React from 'react';
-import dogs from "../dogsdata";
+import React from 'react'
+import dogs from '../dogsdata';
 
 const Cavaliers = () => {
-    const cavaliers = dogs.filter((dog) => dog.breed === "Cavalier King Charles Spaniel");
+    const cavaliers = dogs.filter((dog) => dog.breed === "Cavalier King Charles Spaniel")
     return (
         <div>
             <ul>
                 {
-                    cavaliers.map((cavalier) => {
-                        return <li>{cavalier.name}</li>
+                    cavaliers.map((dog) => {
+                        return <li>{dog.name}</li>
                     })
                 }
             </ul>
         </div>
-    );
-};
+    )
+}
 
-export default Cavaliers;
+export default Cavaliers

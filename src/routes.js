@@ -1,22 +1,20 @@
-import React from "react";
-import Homepage from "./containers/Homepage";
-import Goldens from "./containers/Goldens";
-import Cavaliers from "./containers/Cavaliers";
-import FilteredDogs from "./containers/FilteredDogs";
+import HomePage from './containers/HomePage'
+import About from './containers/About'
+import FilteredDogs from './containers/FilteredDogs';
 import DogDetails from './containers/DogDetails'
 
 const routes = [
     {
         path: "/",
-        exact: true,
-        component: Homepage,
-        title: "Anasayfa"
+        isExact: true,
+        component: HomePage,
+        title: "Home Page"
     },
     {
-        path: "/tur/:yazilanTur",
-        exact: false,
+        path: "/breed/:writtenBreed",
+        isExact: false,
         component: FilteredDogs,
-        title: "Filtrelenmis Dogs"
+        title: "Filtered Dogs"
     },
     {
         path: "/details/:writtenDogId",
@@ -24,12 +22,13 @@ const routes = [
         component: DogDetails,
         title: "Dog Details"
     },
+
     {
-        path: "/hakkinda",
+        path: "/about",
         exact: false,
-        component: () => {return <div>Hakkinda Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eveniet expedita fugiat harum iure laudantium libero maxime nesciunt non, nulla odio pariatur porro, quibusdam quis sed suscipit temporibus veritatis voluptate?</div>},
-        title: "Hakkinda"
-    },
-];
+        component: About,
+        title: "About"
+    }
+]
 
 export default routes;

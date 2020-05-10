@@ -1,20 +1,19 @@
-import React from 'react';
-import dogs from "../dogsdata";
-
+import React from 'react'
+import dogs from '../dogsdata';
 
 const Goldens = () => {
-    const goldens = dogs.filter((dog) => dog.breed === "Golden Retriever");
+    const goldens = dogs.filter((dog) => dog.breed === "Golden Retriever")
     return (
         <div>
             <ul>
                 {
-                    goldens.map((golden) => {
-                        return <li>{golden.name}</li>
+                    goldens.map((dog) => {
+                        return <li>{dog.name}</li>
                     })
                 }
             </ul>
         </div>
-    );
-};
+    )
+}
 
-export default Goldens;
+export default Goldens
