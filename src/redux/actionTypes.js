@@ -1,0 +1,7 @@
+export const GET_FAVORITE = "GET_FAVORITE"
+export const ADD_FAVORITE ="ADD_FAVORITE"
+export const DELETE_FAVORITE= "DELETE_FAVORITE"
+export const SET_STATUS = "SET_STATUS"
+export const RESET_STATUS ="RESET_STATUS"
+export const LOADING_FAV = "LOADING_FAV"
+export const LOADED_FAV ="LOADED_FAV"

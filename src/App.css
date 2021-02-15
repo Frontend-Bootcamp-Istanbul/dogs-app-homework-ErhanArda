@@ -1,38 +1,126 @@
-.App {
+.dog-image{
+  max-height: 171px;
+}
+.ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+  
+
+.card {
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  margin: 1% auto;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  margin: 1% auto;
+} 
+
+.a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+
+
+/*Formik*/
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
   text-align: center;
+  width: 100%;
+  color: #111;
+  font-weight: lighter;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.firstName, .company, .mail {
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.lastName, .phone, .url {
+  margin-left: 10px;
+}
+
+.firstName, .lastName, .company, .phone, .email, .url {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.firstName, .lastName, .company, .phone, .email, .url {
+  width: 45%;
+}
+
+.submitForm {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.submitForm button {
+  background-color: #5f519e;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 50%;
+  border-radius: 30px;
+  padding: 8px 0px;
+  font-weight: lighter;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submitForm button:hover {
+  color: #5f519e;
+  background-color: #fff;
+  border: 2px solid #5f519e;
+}
+
+.preference {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-field {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+input.error {
+  border: 1px solid red;
 }
